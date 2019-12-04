@@ -24,7 +24,7 @@ function startCarousel() {
 function setupEraser() {
   const canvas = document.getElementById('canvas');
   const ctx = canvas.getContext('2d');
-  const img = new Image();
+  const img = document.getElementById('cover');
   const eraserThickness = 40;
 
   const updateCanvasSize = () => {
@@ -33,8 +33,8 @@ function setupEraser() {
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
   };
 
-  img.addEventListener('load', updateCanvasSize);
-  img.src = 'https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500';
+  updateCanvasSize();
+  canvas.classList.add('loaded');
 
   const previousPosition = {};
   document.addEventListener('mousemove', event => {
