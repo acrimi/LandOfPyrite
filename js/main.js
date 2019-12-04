@@ -1,4 +1,27 @@
 window.onload = () => {
+  startCarousel();
+  setupEraser();
+};
+
+function startCarousel() {
+  const backgrounds = [];
+  let activeIndex = 0;
+  for (let i = 0; i < 6; i++) {
+    const bg = document.getElementById(`bg${i + 1}`);
+    backgrounds.push(bg);
+    if (bg.classList.contains('active')) {
+      activeIndex = i;
+    }
+  }
+
+  setInterval(() => {
+    backgrounds[activeIndex].classList.remove('active');
+    activeIndex = (activeIndex + 1) % backgrounds.length;
+    backgrounds[activeIndex].classList.add('active');
+  }, 5000);
+}
+
+function setupEraser() {
   const canvas = document.getElementById('canvas');
   const ctx = canvas.getContext('2d');
   const img = new Image();
@@ -45,4 +68,4 @@ window.onload = () => {
   });
 
   window.addEventListener('resize', updateCanvasSize);
-};
+}
