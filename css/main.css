@@ -2,11 +2,39 @@ body {
   background: black;
 }
 
-h1 {
-  text-align: center;
+#content {
+  color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 600px;
+  width: 50%;
+  padding: 60px;
+  box-sizing: border-box;
 }
 
-canvas {
+#title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 90px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+#byline {
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  color: #e0007f;
+  margin: 8px 0;
+}
+
+#description {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#canvas {
   position: fixed;
   top: 0;
   left: 0;
