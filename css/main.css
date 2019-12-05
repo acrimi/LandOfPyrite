@@ -24,6 +24,14 @@ body {
   margin: 0;
 }
 
+.pyrite {
+  color: darkgoldenrod;
+}
+
+.gold {
+  color: goldenrod;
+}
+
 #byline {
   font-family: 'Josefin Sans', sans-serif;
   text-transform: uppercase;
