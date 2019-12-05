@@ -51,7 +51,7 @@ body {
   height: 100%;
   z-index: 100;
   pointer-events: none;
-  background: black url(../images/cover.jpeg) top left / 100% 100% no-repeat;
+  background: black url(../images/cover.jpeg) center center / cover no-repeat;
 }
 
 #canvas.loaded {
