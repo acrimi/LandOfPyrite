@@ -37,8 +37,8 @@ function setupEraser() {
   canvas.classList.add('loaded');
 
   const previousPosition = {};
-  document.addEventListener('mousemove', event => {
-    ctx.save();  	
+  const onMove = event => {
+    ctx.save();
     ctx.beginPath();
     ctx.arc(event.pageX, event.pageY, eraserThickness / 2, 0, Math.PI * 2);
     if (previousPosition.x != undefined && previousPosition.y != undefined) {
@@ -60,7 +60,9 @@ function setupEraser() {
     
     previousPosition.x = event.pageX;
     previousPosition.y = event.pageY;
-  });
+  };
+  document.addEventListener('mousemove', onMove);
+  document.addEventListener('touchmove', event => onMove(event.touches[0]));
 
   document.addEventListener('mouseenter', event => {
     previousPosition.x = event.pageX;
