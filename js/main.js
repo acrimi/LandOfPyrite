@@ -30,7 +30,18 @@ function setupEraser() {
   const updateCanvasSize = () => {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    let sourceWidth = img.width;
+    let sourceHeight = img.height;
+    const imgRatio = sourceWidth / sourceHeight;
+    const canvasRatio = canvas.width / canvas.height;
+    if (imgRatio > canvasRatio) {
+      sourceWidth = sourceHeight * canvasRatio;
+    } else {
+      sourceHeight = sourceWidth / canvasRatio;
+    }
+    const x = img.width/2 - sourceWidth/2;
+    const y = img.height/2 - sourceHeight/2;
+    ctx.drawImage(img, x, y, sourceWidth, sourceHeight, 0, 0, canvas.width, canvas.height);
   };
 
   updateCanvasSize();
