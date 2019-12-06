@@ -1,81 +1,95 @@
 body {
-  background: black;
   margin: 0;
+  background: #fefdfa
 }
 
-#content {
-  color: #ebebeb;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-  max-width: 600px;
-  width: 50%;
-  padding: 60px;
-  box-sizing: border-box;
+#ball {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  max-height: 90%;
+  height: 800px;
+  width: 100%;
+  background: url(../images/ball.jpg) center right / contain no-repeat;
 }
 
 #title {
-  font-family: 'Josefin Sans', sans-serif;
-  font-style: italic;
-  font-weight: bold;
-  font-size: 90px;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.pyrite {
-  color: darkgoldenrod;
-}
-
-.gold {
-  color: goldenrod;
-}
-
-#byline {
-  font-family: 'Josefin Sans', sans-serif;
-  text-transform: uppercase;
-  color: #e0007f;
-  margin: 8px 0;
-}
-
-#description {
-  font-family: 'Open Sans', sans-serif;
-}
-
-#canvas {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  pointer-events: none;
-  background: black url(../images/cover.jpeg) center center / cover no-repeat;
-}
-
-#canvas.loaded {
-  background: none;
-}
-
-img#cover {
-  position: fixed;
-  left: 10000px;
-}
-
-img.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   z-index: -1;
-  object-fit: cover;
-  object-position: center;
-  opacity: 0;
-  transition: opacity .5s;
+  bottom: 0;
+  left: 0;
+  max-height: 80%;
+  height: 800px;
+  width: 100%;
+  background: url(../images/title.jpg) center left  / contain no-repeat;
 }
 
-img.background.active {
-  opacity: 1;
+.content {
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.column {
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  width: 50%;
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+.column.left {
+  align-self: start;
+}
+
+.column.right {
+  align-self: flex-end;
+}
+
+h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+a {
+  color: #fefdfa;
+  background: #333;
+  border-radius: 10px;
+  min-height: 40px;
+  min-width: 40px;
+  text-decoration: none;
+  margin: 5px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+}
+
+a#instagram {
+  padding: 8px;
+}
+
+#instagram .icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/instagram.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-clip: padding-box;
 }
