@@ -16,10 +16,11 @@ body {
   z-index: -1;
   top: 0;
   right: 0;
-  max-height: 90%;
   height: 800px;
   width: 100%;
-  background: url(../images/ball.png) center right / contain no-repeat;
+  max-height: 85%;
+  max-width: 45%;
+  background: url(../images/ball.png) top right / contain no-repeat;
 }
 
 #title {
@@ -27,10 +28,11 @@ body {
   z-index: -1;
   bottom: 0;
   left: 0;
-  max-height: 80%;
   height: 800px;
   width: 100%;
-  background: url(../images/title.jpg) center left  / contain no-repeat;
+  max-height: 80%;
+  max-width: 60%;
+  background: url(../images/title.jpg) bottom left  / contain no-repeat;
 }
 
 .content {
@@ -61,7 +63,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   width: 50%;
-  padding: 40px 60px;
+  padding: 30px 60px;
   box-sizing: border-box;
 }
 
@@ -116,4 +118,46 @@ a#instagram {
   background-size: contain;
   background-repeat: no-repeat;
   background-clip: padding-box;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    position: relative;
+    padding-bottom: 75%;
+  }
+  #title, #ball {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: unset;
+    max-height: unset;
+  }
+
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .column, .column.left, .column.right {
+    width: auto;
+    background: #fefdfaee;
+  }
+
+  .column.left {
+    align-self: center;
+    border-radius: 10px;
+    margin: 40px;
+    margin-bottom: 45%;
+    padding: 0px 20px;
+  }
+
+  .column.right {
+    align-self: auto;
+    padding: 20px;
+  }
+
+  .links {
+    margin-top: 50px;
+    justify-content: center;
+  }
 }
