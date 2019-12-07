@@ -3,14 +3,6 @@ body {
   background: #fefdfa
 }
 
-#poster {
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  width: 100%;
-  object-fit: contain;
-}
-
 #ball {
   position: fixed;
   z-index: -1;
@@ -42,18 +34,6 @@ body {
   flex-direction: row;
   min-height: 100vh;
   width: 100%;
-}
-
-.content.alt {
-  justify-content: space-evenly;
-}
-
-.content.alt .column {
-  align-items: center;
-  background: #fefdfa;
-  border-radius: 20px;
-  width: 600px;
-  max-width: 50%;
 }
 
 .column {
@@ -160,4 +140,58 @@ a#instagram {
     margin-top: 50px;
     justify-content: center;
   }
+}
+
+
+/* Alt layout 1 */
+#poster.full {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  object-fit: contain;
+}
+
+.content.alt {
+  justify-content: space-evenly;
+}
+
+.content.alt .column {
+  align-items: center;
+  background: #fefdfa;
+  border-radius: 20px;
+  width: 600px;
+  max-width: 50%;
+}
+
+/* Alt layout 2 */
+.content.alt2 {
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.content.alt2 .column {
+  align-self: unset;
+}
+
+.content.alt2 .column.left {
+  justify-content: center;
+}
+
+.content.alt2 .column.center {
+  max-width: 40%;
+  padding: 0;
+}
+
+.content.alt2 .column.right {
+  align-items: center;
+}
+
+.content.alt2 #poster {
+  height: 100vh;
+  object-fit: contain;
+}
+
+.content.alt2 .links {
+  margin-top: auto;
 }
