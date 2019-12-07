@@ -100,53 +100,6 @@ a#instagram {
   background-clip: padding-box;
 }
 
-@media screen and (max-width: 600px) {
-  body {
-    position: relative;
-    padding-bottom: 75%;
-    background: #fefdfa url(../images/title.jpg) bottom left  / contain no-repeat;
-  }
-
-  #title, #ball {
-    display: none;
-  }
-
-  .content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .column, .column.left, .column.right {
-    width: auto;
-    background: #fefdfaee;
-  }
-
-  .column.left {
-    align-self: center;
-    border-radius: 10px;
-    margin: 0;
-    padding: 40px 60px;
-    background: url(../images/ball.png) top right / cover no-repeat;
-    padding-bottom: 45%;
-  }
-
-  .column.left p {
-    background: #fefdfaee;
-    padding: 20px;
-    border-radius: 10px;
-  }
-
-  .column.right {
-    align-self: auto;
-    padding: 20px;
-  }
-
-  .links {
-    margin-top: 50px;
-    justify-content: center;
-  }
-}
-
 
 /* Alt layout 1 */
 #poster.full {
@@ -172,24 +125,25 @@ a#instagram {
 /* Alt layout 2 */
 .content.alt2 {
   min-height: 100vh;
-  justify-content: center;
+  justify-content: space-between;
+  background: url(../images/LOPLOG_Poster.jpg) center / contain no-repeat;
 }
 
 .content.alt2 .column {
+  color: #444;
   align-self: unset;
+  width: 33%;
+  min-width: 300px;
 }
 
 .content.alt2 .column.left {
   justify-content: center;
-}
-
-.content.alt2 .column.center {
-  max-width: 40%;
-  padding: 0;
+  background: linear-gradient(to right, #fefdfaee, 90%, #fefdfa00);
 }
 
 .content.alt2 .column.right {
   align-items: center;
+  background: linear-gradient(to left, #fefdfaee, 90%, #fefdfa00);
 }
 
 .content.alt2 #poster {
@@ -199,4 +153,56 @@ a#instagram {
 
 .content.alt2 .links {
   margin-top: auto;
+}
+
+
+@media screen and (max-width: 600px) {
+  body {
+    position: relative;
+    padding-bottom: 75%;
+    background: #fefdfa url(../images/title.jpg) bottom left  / contain no-repeat;
+  }
+
+  #title, #ball {
+    display: none;
+  }
+
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content.alt2 {
+    background: none;
+  }
+
+  .column, .content.alt2 .column {
+    width: auto;
+    background: #fefdfaee;
+  }
+
+  .column.left, .content.alt2 .column.column.left {
+    align-self: center;
+    border-radius: 10px;
+    margin: 0;
+    padding: 40px 60px;
+    background: url(../images/ball.png) top right / cover no-repeat;
+    padding-bottom: 45%;
+  }
+
+  .column.left p {
+    background: #fefdfaee;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .column.right {
+    align-self: auto;
+    padding: 20px;
+  }
+
+  .links {
+    margin-top: 50px;
+    justify-content: center;
+  }
 }
