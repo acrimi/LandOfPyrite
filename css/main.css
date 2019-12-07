@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: #fefdfa
+  background: #fefdfa;
 }
 
 #ball {
@@ -104,7 +104,7 @@ a#instagram {
   body {
     position: relative;
     padding-bottom: 75%;
-    background: url(../images/title.jpg) bottom left  / contain no-repeat;
+    background: #fefdfa url(../images/title.jpg) bottom left  / contain no-repeat;
   }
 
   #title, #ball {
