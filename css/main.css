@@ -104,13 +104,11 @@ a#instagram {
   body {
     position: relative;
     padding-bottom: 75%;
+    background: url(../images/title.jpg) bottom left  / contain no-repeat;
   }
+
   #title, #ball {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    max-width: unset;
-    max-height: unset;
+    display: none;
   }
 
   .content {
@@ -126,9 +124,16 @@ a#instagram {
   .column.left {
     align-self: center;
     border-radius: 10px;
-    margin: 40px;
-    margin-bottom: 45%;
-    padding: 0px 20px;
+    margin: 0;
+    padding: 40px 60px;
+    background: url(../images/ball.png) top right / cover no-repeat;
+    padding-bottom: 45%;
+  }
+
+  .column.left p {
+    background: #fefdfaee;
+    padding: 20px;
+    border-radius: 10px;
   }
 
   .column.right {
