@@ -1,10 +1,11 @@
 body {
+  position: relative;
   margin: 0;
   background: #fefdfa;
 }
 
 #ball {
-  position: fixed;
+  position: absolute;
   z-index: -1;
   top: 0;
   right: 0;
@@ -16,7 +17,7 @@ body {
 }
 
 #title {
-  position: fixed;
+  position: absolute;
   z-index: -1;
   bottom: 0;
   left: 0;
@@ -201,7 +202,7 @@ a#instagram {
     padding: 20px;
   }
 
-  .links {
+  .links, .content.alt2 .links {
     margin-top: 50px;
     justify-content: center;
   }
