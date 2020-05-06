@@ -71,6 +71,7 @@ h3 {
 .links {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   margin-top: 20px;
 }
 
@@ -171,6 +172,7 @@ a#instagram {
   .content {
     flex-direction: column;
     text-align: center;
+    min-height: 0;
   }
 
   .content.alt2 {
