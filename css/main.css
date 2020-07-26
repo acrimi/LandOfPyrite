@@ -1,7 +1,7 @@
 body {
   position: relative;
   margin: 0;
-  background: #fefdfa;
+  background: #090d1a;
 }
 
 #background {
@@ -11,16 +11,10 @@ body {
   z-index: -1;
 }
 
-#map-image, #map-video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-#map-image {
-  background: url(../images/map_endFrame.png) center center / cover no-repeat
+#map-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
 #content {
