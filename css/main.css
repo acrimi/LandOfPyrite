@@ -76,7 +76,7 @@ body {
 }
 
 #links .button {
-  padding: 5px;
+  padding: 4px;
 }
 
 .icon {
@@ -90,7 +90,7 @@ body {
 }
 
 .ic-imdb {
-  background-image: url(../images/instagram.png);
+  background-image: url(../images/imdb.png);
 }
 
 .ic-instagram {
@@ -98,7 +98,7 @@ body {
 }
 
 .ic-spotify {
-  background-image: url(../images/instagram.png);
+  background-image: url(../images/spotify.png);
 }
 
 /* #ball {
