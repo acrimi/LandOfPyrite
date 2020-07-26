@@ -4,7 +4,104 @@ body {
   background: #fefdfa;
 }
 
-#ball {
+#background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#map-image, #map-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+#map-image {
+  background: url(../images/map_endFrame.png) center center / cover no-repeat
+}
+
+#content {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#title-wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  height: 50%;
+  max-height: 600px;
+}
+
+#buttons {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#links {
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: #70716f;
+  background: #0c111e;
+  border: none;
+  border-radius: 10px;
+  min-height: 40px;
+  min-width: 40px;
+  text-decoration: none;
+  margin: 10px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+#links .button {
+  padding: 5px;
+}
+
+.icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-clip: padding-box;
+}
+
+.ic-imdb {
+  background-image: url(../images/instagram.png);
+}
+
+.ic-instagram {
+  background-image: url(../images/instagram.png);
+}
+
+.ic-spotify {
+  background-image: url(../images/instagram.png);
+}
+
+/* #ball {
   position: absolute;
   z-index: -1;
   top: 0;
@@ -103,7 +200,7 @@ a#instagram {
 }
 
 
-/* Alt layout 1 */
+// Alt layout 1
 #poster.full {
   position: absolute;
   top: 0;
@@ -124,7 +221,7 @@ a#instagram {
   max-width: 50%;
 }
 
-/* Alt layout 2 */
+// Alt layout 2
 .content.alt2 {
   min-height: 100vh;
   justify-content: space-between;
@@ -208,4 +305,4 @@ a#instagram {
     margin-top: 50px;
     justify-content: center;
   }
-}
+} */
