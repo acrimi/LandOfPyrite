@@ -43,6 +43,7 @@ body {
 #title {
   height: 50%;
   max-height: 600px;
+  filter: drop-shadow(-10px 8px 6px #080d17);
 }
 
 #buttons {
