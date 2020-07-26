@@ -5,4 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('buttons').classList.add('visible');
     }, 9200);
   };
+
+  const overlay = document.getElementById('overlay');
+  document.getElementById('synopsis').onclick = () => {
+    overlay.classList.add('visible');
+  };
+
+  overlay.onclick = () => {
+    overlay.classList.remove('visible');
+  }
 });

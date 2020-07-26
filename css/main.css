@@ -2,6 +2,7 @@ body {
   position: relative;
   margin: 0;
   background: #090d1a;
+  font-family: 'Lato', sans-serif;
 }
 
 #background {
@@ -18,8 +19,8 @@ body {
 }
 
 #content {
-  position: relative;
-  min-height: 100vh;
+  position: fixed;
+  height: 100%;
   width: 100%;
 }
 
@@ -72,7 +73,6 @@ body {
 
 .button {
   display: none;
-  font-family: 'Lato', sans-serif;
   font-size: 18px;
   color: #70716f;
   background: #0c111e;
@@ -116,6 +116,40 @@ body {
 
 .ic-spotify {
   background-image: url(../images/spotify.png);
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+#overlay #modal {
+  max-width: 900px;
+  padding: 15px 40px;
+  margin: 40px;
+  font-size: 18px;
+  color: #70716f;
+  background: #090d1a;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#overlay.visible {
+  background: #0c111eaa;
+  opacity: 1;
+  z-index: 1;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 @media screen and (max-width: 460px) {
