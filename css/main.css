@@ -33,7 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 1.5s 3.5s;
+  transition: opacity 1.5s 3.25s;
 }
 
 #title {
@@ -51,7 +51,7 @@ body {
   flex-direction: row;
   justify-content: center;
   opacity: 0;
-  transition: opacity 1s 9s;
+  transition: opacity 1s 9.2s;
 }
 
 #links {
