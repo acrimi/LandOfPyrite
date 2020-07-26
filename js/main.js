@@ -11,7 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.classList.add('visible');
   };
 
-  overlay.onclick = () => {
-    overlay.classList.remove('visible');
-  }
+  overlay.onclick = (e) => {
+    if (e.target === overlay) {
+      overlay.classList.remove('visible');
+    }
+  };
+
+  document.addEventListener('keyup', (e) => {
+    if (e.code === 'Escape') {
+      overlay.classList.remove('visible');
+    }
+  });
 });
