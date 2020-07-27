@@ -152,9 +152,8 @@ body {
   font-weight: bold;
 }
 
-/* @media screen and (max-width: 460px) {
+@media screen and (max-width: 460px) {
   #title-wrapper {
-    padding-top: 40px;
-    align-items: start;
+    padding-bottom: 170px;
   }
-} */
+}
