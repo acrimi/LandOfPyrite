@@ -154,6 +154,6 @@ body {
 
 @media screen and (max-width: 460px) {
   #title-wrapper {
-    padding-bottom: 170px;
+    padding-bottom: 60px;
   }
 }
